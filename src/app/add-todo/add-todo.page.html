@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-back-button color="light"></ion-back-button>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Todo Title</ion-label>
+      <ion-input type="text" [(ngModel)]="todo_title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Todo Description</ion-label>
+      <ion-textarea type="text" [(ngModel)]="todo_description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Todo End time</ion-label>
+      <ion-datetime min="2019" display-format="MM/DD/YYYY" [(ngModel)]="todo_end_date"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+<br>
+
+  <ion-button expand="full"  color="danger" (click)="addTodo()"> ADD</ion-button>
+
+</ion-content>
